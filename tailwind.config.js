@@ -1,12 +1,9 @@
 /** @type {import('tailwindcss').Config} */
-module.exports = {
+import tailwindAnimate from "tailwindcss-animate";
+
+export default {
   darkMode: ["class"],
-  content: [
-    './pages/**/*.{ts,tsx}',
-    './components/**/*.{ts,tsx}',
-    './app/**/*.{ts,tsx}',
-    './src/**/*.{ts,tsx}',
-  ],
+  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   prefix: "",
   theme: {
     container: {
@@ -71,7 +68,11 @@ module.exports = {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
       },
+      backgroundImage: {
+        "section-overlay":
+          "linear-gradient(to bottom, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0.6) 100%)",
+      },
     },
   },
-  plugins: [require("tailwindcss-animate")],
-}
+  plugins: [tailwindAnimate],
+};
