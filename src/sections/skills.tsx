@@ -30,15 +30,19 @@ const skillCategories = [
     name: "Frontend",
     icon: <Layout className="w-6 h-6" />,
     skills: [
-      { name: "React", level: "Advanced", icon: <Code className="w-4 h-4" /> },
+      {
+        name: "React",
+        level: "Advanced" as SkillLevel,
+        icon: <Code className="w-4 h-4" />,
+      },
       {
         name: "TypeScript",
-        level: "Advanced",
+        level: "Advanced" as SkillLevel,
         icon: <Code className="w-4 h-4" />,
       },
       {
         name: "Next.js",
-        level: "Intermediate",
+        level: "Intermediate" as SkillLevel,
         icon: <Code className="w-4 h-4" />,
       },
     ],
@@ -49,12 +53,12 @@ const skillCategories = [
     skills: [
       {
         name: "Node.js",
-        level: "Intermediate",
+        level: "Intermediate" as SkillLevel,
         icon: <Server className="w-4 h-4" />,
       },
       {
         name: "Python",
-        level: "Intermediate",
+        level: "Intermediate" as SkillLevel,
         icon: <Server className="w-4 h-4" />,
       },
     ],
@@ -65,12 +69,12 @@ const skillCategories = [
     skills: [
       {
         name: "PostgreSQL",
-        level: "Intermediate",
+        level: "Intermediate" as SkillLevel,
         icon: <Database className="w-4 h-4" />,
       },
       {
         name: "SQL",
-        level: "Intermediate",
+        level: "Intermediate" as SkillLevel,
         icon: <Database className="w-4 h-4" />,
       },
     ],
@@ -179,7 +183,6 @@ const Skills: React.FC<SkillsProps> = ({ isActive }) => {
               "NestJS",
               "AWS",
               "CMS Strapi",
-              
             ].map((tech) => (
               <Badge
                 key={tech}

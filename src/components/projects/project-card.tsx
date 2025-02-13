@@ -23,7 +23,7 @@ interface ProjectCardProps {
     technologies: string[];
     liveLink?: string;
     githubLink?: string;
-    status?: "development" | "placeholder";
+    status?: string;
   };
   isFirst?: boolean;
   isLast?: boolean;
@@ -110,13 +110,25 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
                   <motion.div
                     initial={{ opacity: 0, scale: 0.8 }}
                     animate={{ opacity: 1, scale: 1 }}
-                    className={`${statusConfig[project.status].color}  px-3 py-1 rounded-full text-sm font-medium flex items-center gap-1.5`}
+                    className={`${
+                      statusConfig[project.status as keyof typeof statusConfig]
+                        .color
+                    }  px-3 py-1 rounded-full text-sm font-medium flex items-center gap-1.5`}
                   >
                     {(() => {
-                      const StatusIcon = statusConfig[project.status].icon;
+                      const StatusIcon =
+                        statusConfig[
+                          project.status as keyof typeof statusConfig
+                        ].icon;
                       return <StatusIcon className="w-4 h-4" />;
                     })()}
-                    <p>{statusConfig[project.status].text}</p>
+                    <p>
+                      {
+                        statusConfig[
+                          project.status as keyof typeof statusConfig
+                        ].text
+                      }
+                    </p>
                   </motion.div>
                 )}
               </div>
