@@ -10,14 +10,6 @@ const fadeInUp = {
   visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
 };
 
-const cardHover = {
-  hover: {
-    scale: 1.02,
-    y: -5,
-    boxShadow: "0px 25px 50px -12px rgba(0, 0, 0, 0.15)",
-  },
-};
-
 const iconHover = {
   hover: { scale: 1.1, rotate: -5 },
   tap: { scale: 0.95 },
@@ -77,7 +69,6 @@ const About: React.FC<AboutProps> = ({ isActive }) => {
           isActive={isActive}
         />
         <motion.div
-          whileHover="hover"
           initial="hidden"
           whileInView="visible"
           variants={fadeInUp}
@@ -85,13 +76,11 @@ const About: React.FC<AboutProps> = ({ isActive }) => {
         >
           <motion.div
             whileHover={{
-              scale: 1.03,
-              y: -5,
-              boxShadow: "0px 25px 50px -12px rgba(59, 130, 246, 0.15)",
+              boxShadow: "0px 0px 25px rgba(59, 130, 246, 0.3)",
             }}
-            transition={{ type: "spring", stiffness: 300, damping: 10 }}
+            transition={{ type: "spring", stiffness: 400, damping: 20 }}
           >
-            <Card className="shadow-lg overflow-hidden border-2 border-gray-200/50 hover:border-primary/30 transition-all">
+            <Card className="shadow-lg overflow-hidden border-2 border-gray-200/50 hover:border-primary/20 transition-all">
               <CardContent className="p-8">
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
                   {boxes.map((item, index) => (
@@ -102,8 +91,7 @@ const About: React.FC<AboutProps> = ({ isActive }) => {
                       viewport={{ once: true }}
                       whileHover="hover"
                       transition={{ duration: 0.05 }}
-                      className={`bg-gradient-to-br ${item.gradient} flex flex-col text-center items-center p-6 rounded-xl border select-none border-gray-200/50 hover:border-primary/30 transition-all `}
-                      variants={cardHover}
+                      className={`bg-gradient-to-br ${item.gradient} flex flex-col text-center items-center p-6 rounded-xl border select-none border-gray-200/50 hover:border-primary/30 hover:shadow-lg hover:shadow-primary/10 transition-all duration-300 `}
                     >
                       <motion.div
                         variants={iconHover}

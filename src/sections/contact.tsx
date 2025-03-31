@@ -50,8 +50,7 @@ const Contact: React.FC<ContactProps> = ({ isActive }) => {
 
   const onSubmit = async (data: FormValues) => {
     console.log("Form data:", data);
-    // Add your submission logic here (e.g., API call)
-    reset(); // Reset the form after submission
+    reset();
   };
 
   const openSocialLink = (url: string) => {
@@ -61,7 +60,7 @@ const Contact: React.FC<ContactProps> = ({ isActive }) => {
   return (
     <div
       id="contact"
-      className="relative min-h-screen flex items-center justify-center py-20 bg-gradient-to-b from-white/80 to-white/60"
+      className="relative min-h-screen flex items-center pb-20 justify-center bg-gradient-to-b from-white/80 to-white/60"
     >
       <div className="w-full max-w-4xl mx-auto">
         <SectionHeader

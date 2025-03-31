@@ -72,7 +72,6 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
       )}
 
       <motion.div
-        whileHover={{ scale: 1.03 }}
         transition={{ type: "spring", stiffness: 500, damping: 30 }}
         onHoverStart={() => setIsCardHovered(true)}
         onHoverEnd={() => setIsCardHovered(false)}
@@ -147,7 +146,6 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
                   {project.technologies.map((tech) => (
                     <motion.div
                       key={tech}
-                      whileHover={{ scale: 1.05, y: -1 }}
                       whileTap={{ scale: 0.95 }}
                       transition={{
                         type: "spring",

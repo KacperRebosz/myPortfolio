@@ -9,6 +9,16 @@ export const projects = [
     githubLink: "https://github.com/KacperRebosz/myPortfolio",
   },
   {
+    title: "League Insights",
+    description:
+      "A web application designed for League of Legends players to explore and analyze champion statistics, player performance, and other insights.",
+    image: "/images/league-insights.png",
+    technologies: ["React", "TypeScript", "Next.js", "PostgreSQL", "NestJS"],
+    // liveLink: "test",
+    githubLink: "https://github.com/ziebamikolaj/League-Insights",
+    status: "development",
+  },
+  {
     title: "Allotment Gardens Website",
     description:
       "A task management application that helps users organize their daily tasks, set deadlines, and track progress. Features include user authentication and drag-and-drop functionality.",
@@ -26,23 +36,14 @@ export const projects = [
     // liveLink: "test",
     githubLink: "https://github.com/KacperRebosz/KnapsackProblemSolver",
   },
+
   {
-    title: "League Insights",
+    title: "CV Tracker",
     description:
-      "A web application designed for League of Legends players to explore and analyze champion statistics, player performance, and other insights.",
-    image: "/images/league-insights.png",
-    technologies: ["React", "TypeScript", "Next.js", "PostgreSQL", "NestJS"],
-    // liveLink: "test",
-    githubLink: "https://github.com/ziebamikolaj/League-Insights",
-    status: "development",
-  },
-  {
-    title: "Blog Platform",
-    description:
-      "A content management system for blogging, allowing users to create, edit, and delete posts. Features include markdown support, categories, and commenting.",
-    image: "/images/noImagePlaceholder.svg",
-    technologies: ["Django", "Python", "PostgreSQL", "Bootstrap"],
-    status: "placeholder",
+      "Web application designed to help users track their job applications. It allows users to add, update, and delete job applications, as well as filter and sort them based on various criteria.",
+    image: "/images/cv_tracker.png",
+    technologies: ["Next.js", "TypeScript", "PostgreSQL"],
+    githubLink: "https://github.com/KacperRebosz/CV-Tracker",
   },
   {
     title: "Chat Application",

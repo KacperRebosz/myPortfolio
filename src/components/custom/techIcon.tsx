@@ -60,7 +60,7 @@ const techIcons: { [key: string]: JSX.Element } = {
 const TechIcon = ({ tech }: { tech: string }) => {
   return (
     <div className="group flex items-center gap-1.5 bg-gray-50/80 hover:bg-gray-100/80 px-2.5 py-1.5 rounded-full transition-all duration-200 hover:shadow-sm">
-      <div className="transition-transform duration-200 group-hover:scale-110">
+      <div className="transition-transform duration-200 ">
         {techIcons[tech] || (
           <div className="w-5 h-5 bg-gray-300/80 rounded-full" />
         )}
