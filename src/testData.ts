@@ -30,7 +30,7 @@ export const projects = [
   {
     title: "Knapsack Problem Solver",
     description:
-      "A fully functional e-commerce platform that supports product listings, user accounts, shopping carts, and secure checkout. Integrated with payment gateways.",
+      "A C++ command-line tool utilizing a genetic algorithm to find the optimal set of items for a knapsack, maximizing value within a given weight capacity.",
     image: "/images/noImagePlaceholder.svg",
     technologies: ["C++"],
     // liveLink: "test",
